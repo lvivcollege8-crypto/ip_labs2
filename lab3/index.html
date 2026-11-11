@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна №3: вебсторінка з графічними елементами та мультимедіа">
+  <title>Лабораторна №3 | Програмування в Internet</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="На головну сторінку"><span class="brand-mark" aria-hidden="true">PI</span><span>Програмування в Internet</span></a>
+    <p class="student-line">Чонка Максим Андрійович <span>·</span> ІП-41</p>
+  </header>
+  <nav class="site-nav" aria-label="Основна навігація">
+    <div class="nav-inner">
+      <ul class="menu-level-one">
+        <li><a class="nav-link" href="../">Головна</a></li>
+        <li class="has-submenu"><a class="nav-link" href="#labs">Лабораторні роботи <span aria-hidden="true">⌄</span></a>
+          <ol class="menu-level-two">
+            <li><a href="../lab1/index.html">Lab1 — Лабораторна робота №1</a></li>
+            <li><a href="../lab2/index.html">Lab2 — Створення меню сайту</a></li>
+            <li><a href="./index.html" aria-current="page">Lab3 — Графіка та мультимедіа</a></li>
+          </ol>
+        </li>
+      </ul>
+      <span class="nav-note">Лабораторна №3 · варіант 2 · 2026</span>
+    </div>
+  </nav>
+
+  <main class="page-shell lab3-shell">
+    <article class="main-content lab3-content">
+      <!-- Секція 1: заголовок каналу та логотип закладу. -->
+      <section id="labs" class="hero-card lab3-hero" aria-labelledby="lab-title">
+        <p class="eyebrow">Лабораторна робота №3 · варіант 2</p>
+        <h1 id="lab-title">YouTube-канал ІТ-коледжу Львівської політехніки</h1>
+        <p class="lead">Графічні елементи, відео, аудіо, вбудоване відео й карта Львова.</p>
+        <figure class="college-logo-frame">
+          <img src="../assets/college-logo.jpg" alt="Офіційний логотип Фахового коледжу інформаційних технологій Львівської політехніки" width="300" height="300">
+          <figcaption>Логотип із сайту Фахового коледжу інформаційних технологій</figcaption>
+        </figure>
+      </section>
+
+      <!-- Секція 2: короткий опис і перехід на офіційний YouTube-канал. -->
+      <section class="media-section" aria-labelledby="about-channel">
+        <div class="section-heading"><span class="section-index">01</span><h2 id="about-channel">Про YouTube-канал</h2></div>
+        <p>На каналі ІТ-коледжу Львівської політехніки публікуються відео про студентське життя, культурні події та навчання. Кнопка відкриває офіційну сторінку каналу.</p>
+        <a class="subscribe-button" href="https://www.youtube.com/@itcollegelviv" target="_blank" rel="noopener noreferrer">Підписатися <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <!-- Секція 3: локальний короткий MP4-фрагмент із елементами керування. -->
+      <section class="media-section" aria-labelledby="video-title">
+        <div class="section-heading"><span class="section-index">02</span><h2 id="video-title">Відео MP4</h2></div>
+        <p>Короткий локальний відеофрагмент-демо створено для перевірки відтворення тегом <code>&lt;video&gt;</code>.</p>
+        <video class="feature-video" controls preload="metadata" poster="../assets/college-logo.jpg" height="540">
+          <source src="../assets/college-intro.mp4" type="video/mp4">
+          <p>Ваш браузер не підтримує відео MP4. <a href="../assets/college-intro.mp4">Відкрити відеофайл</a>.</p>
+        </video>
+      </section>
+
+      <!-- Секція 4: MP3-демо з нативними елементами керування браузера. -->
+      <section class="media-section" aria-labelledby="audio-title">
+        <div class="section-heading"><span class="section-index">03</span><h2 id="audio-title">Аудіо</h2></div>
+        <p>Коротке звукове демо збережене у форматі MP3; керування відтворенням і гучністю надає браузер.</p>
+        <audio class="feature-audio" controls preload="metadata">
+          <source src="../assets/audio-demo.mp3" type="audio/mpeg">
+          <p>Ваш браузер не підтримує аудіо MP3. <a href="../assets/audio-demo.mp3">Відкрити аудіофайл</a>.</p>
+        </audio>
+      </section>
+
+      <!-- Секція 5: відео офіційного YouTube-каналу коледжу у iframe. -->
+      <section class="media-section" aria-labelledby="youtube-title">
+        <div class="section-heading"><span class="section-index">04</span><h2 id="youtube-title">Відео каналу коледжу</h2></div>
+        <p>Вбудовано відео, на яке посилається офіційний сайт коледжу. Власний запис трансляції студента можна буде замінити тут після публікації.</p>
+        <div class="embed-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/MKnNHTKbNXY?rel=0" title="Відео ІТ-коледжу Львівської політехніки на YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <a class="text-link" href="https://www.youtube.com/watch?v=MKnNHTKbNXY" target="_blank" rel="noopener noreferrer">Переглянути відео на YouTube ↗</a>
+      </section>
+
+      <!-- Секція 6: локальна інтерактивна мапа у вкладеному контексті iframe. -->
+      <section class="media-section" aria-labelledby="map-title">
+        <div class="section-heading"><span class="section-index">05</span><h2 id="map-title">Музеї та театри Львова</h2></div>
+        <p>Варіант 2 (парний): інтерактивна карта має два шари — «Музеї» та «Театри», по п’ять позначених місць у кожному. Шари можна перемикати у правому верхньому куті карти.</p>
+        <div class="embed-frame map-frame">
+          <iframe src="map.html" title="Інтерактивна карта музеїв і театрів Львова" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="map-credit">Карта використовує OpenStreetMap. Пункти відкриваються у Google Maps для навігації.</p>
+      </section>
+    </article>
+
+    <!-- Додаткові прев'ю посилаються на реальні відео, пов'язані з коледжем. -->
+    <aside class="sidebar lab3-sidebar" aria-labelledby="video-list-title">
+      <div class="sidebar-card">
+        <p class="eyebrow">Відео коледжу</p>
+        <h2 id="video-list-title">Ще з каналу</h2>
+        <p class="sidebar-intro">П’ять прев’ю ведуть на відео, опубліковані каналом коледжу.</p>
+        <ol class="video-preview-list">
+          <li><a href="https://www.youtube.com/watch?v=05eURliQ-Vc" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/05eURliQ-Vc/mqdefault.jpg" alt="Прев’ю відео до Міжнародного дня рідної мови" loading="lazy"><span>Міжнародний день рідної мови</span></a></li>
+          <li><a href="https://www.youtube.com/watch?v=eOaB4YePOYA" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/eOaB4YePOYA/mqdefault.jpg" alt="Прев’ю відеопривітання з Днем святого Валентина" loading="lazy"><span>З Днем святого Валентина</span></a></li>
+          <li><a href="https://www.youtube.com/watch?v=06dn47KQScE" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/06dn47KQScE/mqdefault.jpg" alt="Прев’ю відео до Дня Соборності України" loading="lazy"><span>День Соборності України</span></a></li>
+          <li><a href="https://www.youtube.com/watch?v=SskE8s-mOA0" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/SskE8s-mOA0/mqdefault.jpg" alt="Прев’ю привітання студентів до Дня вчителя" loading="lazy"><span>Привітання до Дня вчителя</span></a></li>
+          <li><a href="https://www.youtube.com/watch?v=Hv1VmTfj25I" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/Hv1VmTfj25I/mqdefault.jpg" alt="Прев’ю відео про екологію та заповідники" loading="lazy"><span>Екологія та заповідники</span></a></li>
+        </ol>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer"><div><span>©Copyright 2026 by Максим Чонка. All rights reversed.</span><span>Фаховий коледж інформаційних технологій НУ «Львівська політехніка»</span></div></footer>
+</body>
+</html>
