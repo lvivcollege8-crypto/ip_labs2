@@ -17,7 +17,7 @@
 
 ## GitHub
 
-Публічний репозиторій: https://github.com/lvivcollege8-crypto/ip_labs2. Лабораторну №4 додано окремою гілкою `lab4` і злитo в головну гілку `main`.
+Публічний репозиторій: https://github.com/lvivcollege8-crypto/ip_labs2. Лабораторну №4 додано окремою гілкою `lab4` і злито в головну гілку `main`.
 
 ## Netlify
 
