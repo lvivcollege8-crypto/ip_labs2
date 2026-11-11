@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Навчальний сайт лабораторних робіт з програмування в Internet">
+  <title>Лабораторні роботи | Програмування в Internet</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="На головну сторінку">
+      <span class="brand-mark" aria-hidden="true">PI</span>
+      <span>Програмування в Internet</span>
+    </a>
+    <p class="student-line">Чонка Максим Андрійович <span>·</span> ІП-41</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Основна навігація">
+    <div class="nav-inner">
+      <!-- Перший рівень навігації оформлений невпорядкованим списком. -->
+      <ul class="menu-level-one">
+        <li><a class="nav-link" href="./">Головна</a></li>
+        <li class="has-submenu">
+          <a class="nav-link" href="#labs">Лабораторні роботи <span aria-hidden="true">⌄</span></a>
+          <!-- Другий рівень меню — впорядкований список за вимогами методички. -->
+          <ol class="menu-level-two">
+            <li><a href="lab1/index.html">Lab1 — Лабораторна робота №1</a></li>
+            <li><a href="lab2/index.html">Lab2 — Створення меню сайту</a></li>
+            <li><span class="coming-soon">Lab3 — Незабаром</span></li>
+          </ol>
+        </li>
+      </ul>
+      <span class="nav-note">Навчальний проєкт · 2026</span>
+    </div>
+  </nav>
+
+  <main class="page-shell">
+    <article class="main-content">
+      <section id="labs" class="hero-card" aria-labelledby="labs-title">
+        <p class="eyebrow">Портфоліо студента</p>
+        <h1 id="labs-title">Лабораторні роботи</h1>
+        <p class="lead">Навчальні роботи з дисципліни «Програмування в Internet» у зручній навігації.</p>
+        <div class="hero-meta"><span>Фаховий коледж інформаційних технологій</span><span>Львівська політехніка</span></div>
+      </section>
+
+      <section class="intro-section" aria-labelledby="intro-title">
+        <div class="section-heading"><span class="section-index">01</span><h2 id="intro-title">Про цей проєкт</h2></div>
+        <p class="lorem-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, erat a tristique varius, ligula neque tincidunt nibh, vitae feugiat nibh lorem at erat. Vivamus finibus sapien sed massa consequat, a posuere tortor feugiat. Sed non sem sed augue tempus pretium. Curabitur tincidunt, urna id commodo gravida, justo neque vulputate nisl, quis placerat nibh arcu vitae mi. Donec vitae libero at lectus dignissim posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      </section>
+
+      <section class="work-grid" aria-label="Список лабораторних робіт">
+        <a class="work-card muted-card" href="lab1/index.html">
+          <span class="card-topline">LAB 01 <span class="status status-draft">Заготовка</span></span>
+          <h2>Лабораторна робота №1</h2>
+          <p>Сторінка підготовлена для майбутнього розміщення справжньої роботи.</p>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="work-card" href="lab2/index.html">
+          <span class="card-topline">LAB 02 <span class="status status-ready">Виконується</span></span>
+          <h2>Створення меню сайту</h2>
+          <p>Семантична структура, вкладена навігація та публікація проєкту.</p>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </article>
+
+    <aside class="sidebar" aria-labelledby="courses-title">
+      <div class="sidebar-card">
+        <p class="eyebrow">Розвивай навички</p>
+        <h2 id="courses-title">Інші курси</h2>
+        <p class="sidebar-intro">Безкоштовні матеріали для самостійного навчання.</p>
+        <ul class="course-list">
+          <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener noreferrer"><span>01</span>Веброзробка</a></li>
+          <li><a href="https://www.programiz.com/python-programming/" target="_blank" rel="noopener noreferrer"><span>02</span>Python</a></li>
+          <li><a href="https://sqlbolt.com/" target="_blank" rel="noopener noreferrer"><span>03</span>Бази даних і SQL</a></li>
+          <li><a href="https://learngitbranching.js.org/?locale=uk" target="_blank" rel="noopener noreferrer"><span>04</span>Git</a></li>
+          <li><a href="https://www.netacad.com/courses/networking-basics" target="_blank" rel="noopener noreferrer"><span>05</span>Комп’ютерні мережі</a></li>
+        </ul>
+        <p class="sidebar-footnote">Посилання відкриваються у новій вкладці.</p>
+      </div>
+      <div class="quote-card"><span aria-hidden="true">✳</span><p>Крок за кроком<br>до нових знань.</p></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer"><div><span>©Copyright 2026 by Максим Чонка. All rights reversed.</span><span>Фаховий коледж інформаційних технологій НУ «Львівська політехніка»</span></div></footer>
+</body>
+</html>
