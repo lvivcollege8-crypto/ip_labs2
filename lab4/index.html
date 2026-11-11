@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна робота №4: семантична HTML5-форма анкети студента">
+  <title>Лабораторна №4 — Анкета студента | Програмування в Internet</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/lab4.css">
+  <script src="../assets/lab4.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="На головну сторінку"><span class="brand-mark" aria-hidden="true">PI</span><span>Програмування в Internet</span></a>
+    <p class="student-line">Чонка Максим Андрійович <span>·</span> ІП-41</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Основна навігація">
+    <div class="nav-inner">
+      <ul class="menu-level-one">
+        <li><a class="nav-link" href="../">Головна</a></li>
+        <li class="has-submenu">
+          <a class="nav-link" href="#student-form">Лабораторні роботи <span aria-hidden="true">⌄</span></a>
+          <ol class="menu-level-two">
+            <li><a href="../lab1/index.html">Lab1 — Лабораторна робота №1</a></li>
+            <li><a href="../lab2/index.html">Lab2 — Створення меню сайту</a></li>
+            <li><a href="../lab3/index.html">Lab3 — Графіка та мультимедіа</a></li>
+            <li><a href="./index.html" aria-current="page">Lab4 — Анкета студента</a></li>
+          </ol>
+        </li>
+      </ul>
+      <span class="nav-note">Лабораторна №4 · 2026</span>
+    </div>
+  </nav>
+
+  <main class="page-shell lab4-shell">
+    <article class="main-content lab4-content">
+      <section id="student-form" class="hero-card lab4-hero" aria-labelledby="form-title">
+        <p class="eyebrow">Лабораторна робота №4</p>
+        <h1 id="form-title">Анкета студента</h1>
+        <p class="lead">Семантична HTML5-форма з перевіркою даних і різними елементами введення.</p>
+        <div class="hero-meta"><span>Програмування в Internet</span><span>Чонка Максим · ІП-41</span></div>
+      </section>
+
+      <section class="form-intro" aria-labelledby="about-form-title">
+        <div class="section-heading"><span class="section-index">01</span><h2 id="about-form-title">Форма анкети</h2></div>
+        <p>Заповни демонстраційну анкету, щоб перевірити поля, вбудовану валідацію HTML5 і керування формою. Дані не надсилаються та не зберігаються.</p>
+      </section>
+
+      <!-- multipart/form-data та POST потрібні для передавання файлу на сервер; цей статичний приклад нічого не відправляє. -->
+      <form class="student-form" id="survey-form" action="#student-form" method="post" enctype="multipart/form-data">
+        <section class="form-section" aria-labelledby="personal-title">
+          <div class="section-heading"><span class="section-index">02</span><h2 id="personal-title">Особиста інформація</h2></div>
+          <fieldset>
+            <legend>Заповни основні дані</legend>
+            <div class="form-grid">
+              <div class="form-field full-width">
+                <label for="full-name">ПІБ</label>
+                <input id="full-name" name="fullName" type="text" placeholder="Введи ім’я та прізвище" autocomplete="name" minlength="2" maxlength="100" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Електронна пошта</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="password">Пароль для демонстрації</label>
+                <input id="password" name="password" type="password" placeholder="Не використовуй справжній пароль" autocomplete="new-password" minlength="8" required>
+                <small>Введення демонстраційне. Не вводь пароль від своїх акаунтів.</small>
+              </div>
+              <div class="form-field">
+                <label for="age">Вік</label>
+                <input id="age" name="age" type="number" min="14" max="100" step="1" placeholder="Наприклад, 18" required>
+              </div>
+              <div class="form-field">
+                <label for="birth-date">Дата народження</label>
+                <input id="birth-date" name="birthDate" type="date" required>
+              </div>
+              <div class="form-field full-width">
+                <span class="field-label" id="gender-label">Стать</span>
+                <div class="choice-row" role="group" aria-labelledby="gender-label">
+                  <label class="choice"><input type="radio" name="gender" value="male" required><span>Чоловіча</span></label>
+                  <label class="choice"><input type="radio" name="gender" value="female"><span>Жіноча</span></label>
+                  <label class="choice"><input type="radio" name="gender" value="other"><span>Інше</span></label>
+                </div>
+              </div>
+              <div class="form-field full-width">
+                <span class="field-label" id="languages-label">Мови, якими володієш</span>
+                <div class="choice-row" role="group" aria-labelledby="languages-label">
+                  <label class="choice"><input type="checkbox" name="languages" value="english"><span>Англійська</span></label>
+                  <label class="choice"><input type="checkbox" name="languages" value="spanish"><span>Іспанська</span></label>
+                  <label class="choice"><input type="checkbox" name="languages" value="french"><span>Французька</span></label>
+                </div>
+              </div>
+              <div class="form-field full-width">
+                <label for="country">Країна</label>
+                <select id="country" name="country" required>
+                  <option value="" selected disabled>Обери країну</option>
+                  <option value="ua">Україна</option>
+                  <option value="pl">Польща</option>
+                  <option value="de">Німеччина</option>
+                  <option value="other">Інша</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+
+        <section class="form-section" aria-labelledby="subjects-title">
+          <div class="section-heading"><span class="section-index">03</span><h2 id="subjects-title">Навчальні предмети</h2></div>
+          <fieldset>
+            <legend>Обери предмети та оціни інтерес</legend>
+            <div class="form-grid">
+              <div class="form-field full-width">
+                <label for="subjects">Предмети коледжу <span class="label-hint">(можна обрати кілька)</span></label>
+                <select id="subjects" name="subjects" multiple size="5" required aria-describedby="subjects-help">
+                  <option value="mathematics">Математика</option>
+                  <option value="computer-science">Інформатика</option>
+                  <option value="physics">Фізика</option>
+                  <option value="chemistry">Хімія</option>
+                  <option value="english">Англійська мова</option>
+                </select>
+                <small id="subjects-help">На комп’ютері утримуй Ctrl (Windows/Linux) або Command (Mac), щоб вибрати кілька пунктів.</small>
+              </div>
+              <div class="form-field full-width">
+                <div class="range-label"><label for="interest">Інтерес до комп’ютерних наук</label><span><output id="interest-value" for="interest">7</output>/10</span></div>
+                <input id="interest" name="interest" type="range" min="0" max="10" value="7">
+              </div>
+            </div>
+          </fieldset>
+        </section>
+
+        <section class="form-section" aria-labelledby="skills-title">
+          <div class="section-heading"><span class="section-index">04</span><h2 id="skills-title">Навички й уподобання</h2></div>
+          <fieldset>
+            <legend>Додаткова інформація</legend>
+            <div class="form-grid">
+              <div class="form-field full-width">
+                <label for="skills">Опиши свої навички</label>
+                <textarea id="skills" name="skills" rows="5" maxlength="1000" placeholder="Напиши, що вже вмієш робити..."></textarea>
+              </div>
+              <div class="form-field full-width">
+                <label for="resume">Завантаж резюме <span class="label-hint">(необов’язково)</span></label>
+                <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                <small>Для реального передавання потрібен серверний обробник форми.</small>
+              </div>
+              <div class="form-field">
+                <label for="favorite-color">Улюблений колір</label>
+                <input id="favorite-color" name="favoriteColor" type="color" value="#285be7">
+              </div>
+              <div class="form-field">
+                <label for="study-time">Зручний час для навчання</label>
+                <input id="study-time" name="studyTime" type="time">
+              </div>
+            </div>
+          </fieldset>
+        </section>
+
+        <div class="form-actions">
+          <input class="submit-button" type="submit" value="Надіслати анкету">
+          <button class="reset-button" type="reset">Очистити поля</button>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+        <p class="privacy-note">Це навчальна демонстрація: анкета не передає дані на сервер.</p>
+      </form>
+    </article>
+
+    <aside class="sidebar" aria-labelledby="form-notes-title">
+      <div class="sidebar-card">
+        <p class="eyebrow">Підказка</p>
+        <h2 id="form-notes-title">Що перевіряє форма</h2>
+        <ul class="form-check-list">
+          <li>Обов’язкові поля та формат електронної пошти</li>
+          <li>Діапазон віку й мінімальну довжину пароля</li>
+          <li>Вибір радіокнопок, прапорців і кількох предметів</li>
+          <li>Повзунок, текстову область, файл, колір і час</li>
+        </ul>
+      </div>
+      <div class="note-panel"><span class="note-icon" aria-hidden="true">i</span><p>Після надсилання браузер перевіряє введення, але інформація залишається на пристрої та не передається нікуди.</p></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer"><div><span>©Copyright 2026 by Максим Чонка. All rights reversed.</span><span>Фаховий коледж інформаційних технологій НУ «Львівська політехніка»</span></div></footer>
+</body>
+</html>
