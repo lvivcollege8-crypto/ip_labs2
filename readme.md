@@ -4,27 +4,27 @@
 
 ## Структура
 
-- `index.html` — головна сторінка з меню та картками лабораторних.
+- `index.html` — головна сторінка з меню лабораторних.
 - `lab1/index.html` — чесно позначена заготовка лабораторної №1.
-- `lab2/index.html` — лабораторна №2 про створення меню сайту.
-- `lab3/index.html` — сторінка з логотипом, MP4, MP3, YouTube iframe, п’ятьма відеопрев’ю та картою варіанта 2.
-- `lab3/map.html` — інтерактивна карта з двома перемикними шарами і 10 маркерами (5 музеїв і 5 театрів). Карта використовує Leaflet та OpenStreetMap; це поки не користувацька карта Google My Maps.
-- `assets/style.css` — адаптивні стилі всіх сторінок.
-- `assets/college-logo.jpg`, `assets/college-intro.mp4`, `assets/audio-demo.mp3` — графічний та медіафайли для сторінки Lab3.
+- `lab2/index.html` — лабораторна №2 про створення меню.
+- `lab3/index.html` — сторінка лабораторної №3 з графікою й мультимедіа.
+- `lab3/map.html` — Leaflet/OpenStreetMap мапа варіанта 2: 5 музеїв та 5 театрів.
+- `assets/style.css` — адаптивні стилі.
+- `assets/college-logo.jpg`, `assets/college-intro.mp4`, `assets/audio-demo.mp3` — ресурси для Lab3.
 - `LAB3_CHEATSHEET.md` — шпаргалка до захисту.
+
+## GitHub
+
+Публічний репозиторій: https://github.com/lvivcollege8-crypto/ip_labs2. Гілка `lab3` створена, зміни об'єднані у `main`; файли Lab3 доступні в репозиторії.
+
+## Netlify
+
+Раніше використана адреса: https://bespoke-dango-45b158.netlify.app/. Вона відповідає попередньому розгортанню; публікацію поточного стану Lab3 ще не підтверджено.
+
+## Примітки щодо методички
+
+Для повної відповідності вимогам Lab3 потрібно підставити власну Google My Maps карту варіанта 2 (2 шари по 5 об'єктів) та студентське відео про навчання в коледжі. Поточна карта — інтерактивна Leaflet/OpenStreetMap альтернатива. Офіційний сайт коледжу: https://itcollege.lviv.ua/; канал: https://www.youtube.com/@itcollegelviv.
 
 ## Локальний запуск
 
-Відкрий `index.html` у браузері. Для коректної роботи вбудованих зовнішніх карт і відео відкрий проєкт через HTTP-сервер у корені: `python3 -m http.server 8000`, потім перейди на `http://localhost:8000`. Для зовнішнього вмісту потрібне підключення до Інтернету.
-
-## Статус GitHub і Netlify
-
-Існуючий GitHub-репозиторій: https://github.com/lvivcollege8-crypto/ip_labs2. Він публічний, головна гілка — `main`. Локальна гілка `lab3` має коміт, але підключення GitHub відхилило створення віддаленої гілки; Lab3 ще не завантажено в репозиторій.
-
-Попередня адреса Netlify: https://bespoke-dango-45b158.netlify.app/. Вона була опублікована для попереднього стану проєкту; розгортання Lab3 після цієї роботи ще не підтверджено.
-
-## Джерела
-
-- Офіційний сайт коледжу: https://itcollege.lviv.ua/
-- YouTube-канал коледжу: https://www.youtube.com/@itcollegelviv
-- MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Multimedia_and_embedding
+У корені проєкту запусти `python3 -m http.server 8000` і відкрий `http://localhost:8000`. Потрібен доступ до Інтернету для зовнішніх відео/карт.
