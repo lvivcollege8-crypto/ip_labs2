@@ -1,0 +1,46 @@
+/* Лабораторна №6: float, multicolumn layout, position та z-index. */
+.lab6-shell{max-width:1060px;margin-top:34px}
+.lab6-hero{background:linear-gradient(120deg,#192e60,#2f62ce 70%,#5092ee)}
+.lab6-overview,.lab6-article{margin-top:28px;padding:28px 30px;background:#fff;border:1px solid #e6ebf1;border-radius:18px;box-shadow:0 12px 40px rgba(28,48,82,.05)}
+.lab6-overview>p{color:#58677e;font-size:15px;line-height:1.85}
+.lab6-illustration{float:left;width:190px;margin:4px 22px 12px 0;padding:12px;background:#edf4ff;border:1px solid #dce8ff;border-radius:16px}
+.lab6-illustration img{display:block;width:100%;height:auto}
+.lab6-illustration figcaption{margin-top:8px;color:#63728a;font-size:11px;line-height:1.4}
+.lab6-clear{clear:both}
+.lab6-columns{column-count:2;column-gap:34px;column-rule:1px solid #e4eaf2;color:#58677e;font-size:14px;line-height:1.85}
+.lab6-columns p{margin:0 0 15px;break-inside:avoid}
+.lab6-columns code,.lab6-overview code,.lab6-dialog code{padding:2px 5px;border-radius:5px;background:#eef3ff;color:#244da8;font-size:.92em}
+.lab6-demo{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:24px;padding:25px 30px;background:#eaf4ee;border:1px solid #d5eade;border-radius:18px}
+.lab6-demo .eyebrow{color:#28784e;margin-bottom:6px}
+.lab6-demo h2{margin:0 0 6px;font-size:21px}
+.lab6-demo p:last-child{margin:0;color:#527061;font-size:13px}
+.lab6-open-button{border:0;border-radius:12px;padding:12px 18px;background:#285be7;color:#fff;font:inherit;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(40,91,231,.18)}
+.lab6-open-button:hover{background:#1f4dcc}
+.lab6-open-button:focus-visible,.lab6-floating-button:focus-visible,.lab6-dialog-close:focus-visible{outline:3px solid #81a4ff;outline-offset:3px}
+.lab6-note{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding:18px 20px;background:#fff;border:1px solid #e6ebf1;border-radius:15px;color:#63728a;font-size:12px}
+.lab6-note strong{color:#25334a}
+.lab6-note span{padding:4px 8px;background:#f2f5fb;border-radius:99px}
+.lab6-floating-button{position:fixed;right:24px;bottom:24px;z-index:20;width:54px;height:54px;border:0;border-radius:50%;background:#172d5f;color:#fff;font-size:22px;font-weight:800;box-shadow:0 12px 32px rgba(21,43,91,.3);cursor:pointer}
+.lab6-dialog{position:fixed;inset:0;z-index:1000;width:min(520px,calc(100% - 32px));max-width:none;max-height:calc(100% - 32px);padding:0;border:1px solid rgba(255,255,255,.65);border-radius:22px;color:#172437;background:transparent;box-shadow:0 28px 90px rgba(7,21,50,.3);overflow:visible}
+.lab6-dialog::backdrop{background:rgba(13,25,47,.62);backdrop-filter:blur(3px)}
+.lab6-dialog-card{position:relative;padding:32px;background:#fff;border-radius:22px}
+.lab6-dialog-card .eyebrow{color:#285be7}
+.lab6-dialog-card h2{margin:0 34px 12px 0;font-size:25px;line-height:1.2;letter-spacing:-.03em}
+.lab6-dialog-card p,.lab6-dialog-card li{color:#627188;font-size:14px;line-height:1.7}
+.lab6-dialog-card ul{padding-left:20px}
+.lab6-dialog-close{position:absolute;top:13px;right:14px;width:38px;height:38px;border:0;border-radius:50%;background:#f0f3f8;color:#28364b;font-size:25px;cursor:pointer}
+@media(max-width:760px){
+  .lab6-shell{padding-inline:16px;margin-top:22px}
+  .lab6-overview,.lab6-article{padding:22px 20px}
+  .lab6-illustration{width:150px;margin-right:16px}
+  .lab6-columns{column-count:1;column-gap:0;column-rule:0}
+  .lab6-demo{align-items:flex-start;flex-direction:column;padding:22px}
+  .lab6-open-button{width:100%}
+}
+@media(max-width:480px){
+  .lab6-illustration{float:none;width:min(220px,100%);margin:0 auto 18px}
+  .lab6-clear{clear:both}
+  .lab6-floating-button{right:16px;bottom:16px}
+  .lab6-dialog-card{padding:26px 22px}
+  .lab6-dialog-card h2{font-size:22px}
+}
