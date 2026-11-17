@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна робота №6: плаваючі елементи, багатоколонковий макет і модальне вікно.">
+  <title>Лабораторна №6 — Float, Multicolumn і Modal</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="На головну сторінку">
+      <span class="brand-mark" aria-hidden="true">PI</span>
+      <span>Програмування в Internet</span>
+    </a>
+    <p class="student-line">Чонка Максим Андрійович <span>·</span> ІП-41</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Основна навігація">
+    <div class="nav-inner">
+      <ul class="menu-level-one">
+        <li><a class="nav-link" href="../">Головна</a></li>
+        <li class="has-submenu">
+          <a class="nav-link" href="#lab6">Лабораторні роботи <span aria-hidden="true">⌄</span></a>
+          <ol class="menu-level-two">
+            <li><a href="../lab1/index.html">Lab1 — Лабораторна робота №1</a></li>
+            <li><a href="../lab2/index.html">Lab2 — Створення меню сайту</a></li>
+            <li><a href="../lab3/index.html">Lab3 — Графіка та мультимедіа</a></li>
+            <li><a href="../lab4/index.html">Lab4 — Анкета студента</a></li>
+            <li><a href="../lab5/index.html">Lab5 — CSS і Developer Tools</a></li>
+            <li><a href="./index.html" aria-current="page">Lab6 — Float, колонки, модальне вікно</a></li>
+          </ol>
+        </li>
+      </ul>
+      <span class="nav-note">Лабораторна робота №6 · 2026</span>
+    </div>
+  </nav>
+
+  <main class="page-shell single-column lab6-shell">
+    <article class="main-content">
+      <section class="hero-card lab6-hero" id="lab6" aria-labelledby="lab6-title">
+        <p class="eyebrow">Лабораторна робота №6</p>
+        <h1 id="lab6-title">Макет сторінки журналу</h1>
+        <p class="lead">Плаваючий елемент, багатоколонковий текст і модальне вікно на одній адаптивній вебсторінці.</p>
+        <div class="hero-meta"><span>CSS float</span><span>Multicolumn Layout</span><span>position · z-index</span></div>
+      </section>
+
+      <section class="lab6-overview" aria-labelledby="overview-title">
+        <div class="section-heading"><span class="section-index">01</span><h2 id="overview-title">Ідея макета</h2></div>
+        <figure class="lab6-illustration">
+          <img src="img/image.svg" alt="Схематичний малюнок ноутбука з розміткою сторінки">
+          <figcaption>Вебсторінка починається зі структури й композиції.</figcaption>
+        </figure>
+        <p>У цьому навчальному макеті коротка ілюстрація розташована ліворуч, а текст обтікає її завдяки властивості <code>float</code>. Після вступу матеріал розбитий на дві колонки. Кнопка внизу праворуч закріплена відносно вікна, а натискання відкриває модальну картку над сторінкою.</p>
+        <p class="lab6-clear">Текст після плаваючої ілюстрації повертається до звичайного потоку, бо контейнер очищує обтікання через <code>clear: both</code>.</p>
+      </section>
+
+      <section class="lab6-article" aria-labelledby="article-title">
+        <div class="section-heading"><span class="section-index">02</span><h2 id="article-title">Вебсторінка як простір для читання</h2></div>
+        <div class="lab6-columns">
+          <p>Добре спроєктована сторінка допомагає читачеві швидко знайти головну думку. Заголовки задають послідовність, короткі абзаци полегшують перегляд, а достатній міжрядковий інтервал робить текст зручним для тривалого читання. На широкому екрані матеріал можна подати в кілька колонок, зберігаючи природний порядок тексту.</p>
+          <p>Багатоколонкове компонування CSS створює газетний ритм без ручного поділу тексту на окремі контейнери. Властивості <code>column-count</code>, <code>column-gap</code> і <code>column-rule</code> визначають кількість колонок, відстань між ними та роздільну лінію. На вузькому екрані кількість колонок зменшується, щоб рядки залишалися читабельними.</p>
+          <p>Плаваючий елемент корисний, коли невелике зображення має бути поруч із текстом. Значення <code>float: left</code> або <code>float: right</code> виводить його до краю контейнера, а рядки тексту обтікають зображення. Для завершення обтікання застосовують <code>clear</code> або сучасний контейнерний прийом із псевдоелементом.</p>
+          <p>Модальне вікно є окремим шаром поверх основного вмісту. Для нього важливі затемнення фону, зрозуміла кнопка закриття, керування клавіатурою та правильний порядок накладання. У цій роботі використано вбудований елемент <code>&lt;dialog&gt;</code>, метод <code>showModal()</code> і кнопки, що закривають діалог.</p>
+          <p>Позиціонування визначає, де елемент розташований відносно документа або батьківського контейнера. <code>relative</code> зберігає місце елемента у потоці й задає контекст для абсолютно позиціонованих нащадків. <code>fixed</code> прив’язує плаваючу кнопку до вікна перегляду, а <code>z-index</code> допомагає поставити її та модальне вікно на потрібні шари.</p>
+          <p>На малих екранах сітка і багатоколонковий текст перебудовуються в одну колонку. Кнопки мають достатній розмір для дотику, фокус помітний із клавіатури, а модальне вікно не виходить за межі екрана. Так CSS-приклади працюють і як демонстрація властивостей, і як цілісна сторінка.</p>
+        </div>
+      </section>
+
+      <section class="lab6-demo" aria-labelledby="demo-title">
+        <div>
+          <p class="eyebrow">Інтерактивний елемент</p>
+          <h2 id="demo-title">Відкрий модальне вікно</h2>
+          <p>Натисни кнопку, щоб побачити окремий шар із коротким описом використаних властивостей.</p>
+        </div>
+        <button class="lab6-open-button" type="button" data-open-dialog>Відкрити опис роботи</button>
+      </section>
+
+      <aside class="lab6-note" aria-label="Використані CSS властивості">
+        <strong>У макеті використано:</strong>
+        <span>float і clear</span><span>column-count і column-gap</span><span>position: fixed</span><span>z-index та dialog</span>
+      </aside>
+    </article>
+  </main>
+
+  <button class="lab6-floating-button" type="button" data-open-dialog aria-label="Відкрити інформацію про макет">i</button>
+
+  <dialog class="lab6-dialog" aria-labelledby="dialog-title">
+    <div class="lab6-dialog-card">
+      <button class="lab6-dialog-close" type="button" data-close-dialog aria-label="Закрити вікно">×</button>
+      <p class="eyebrow">Довідка · лабораторна №6</p>
+      <h2 id="dialog-title">Плаваючі та модальні елементи</h2>
+      <p>Ілюстрація демонструє <code>float</code>, текстовий блок — CSS columns, а це вікно — модальний шар із керуванням через <code>position</code> і <code>z-index</code>.</p>
+      <ul>
+        <li>Плаваюче зображення обтікається вступним текстом.</li>
+        <li>Основний матеріал автоматично ділиться на колонки.</li>
+        <li>Кнопка закриває вікно; клавіша Escape теж працює.</li>
+      </ul>
+      <button class="lab6-open-button" type="button" data-close-dialog>Зрозуміло</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer"><div><span>© 2026 Максим Чонка. Навчальний проєкт.</span><span>Фаховий коледж інформаційних технологій НУ «Львівська політехніка»</span></div></footer>
+</body>
+</html>
