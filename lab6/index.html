@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Лабораторна робота №6: плаваючі елементи, багатоколонковий макет і модальне вікно.">
-  <title>Лабораторна №6 — Float, Multicolumn і Modal</title>
+  <meta name="description" content="Лабораторна робота №6: плаваючі елементи, багатоколонковий макет, position і модальне вікно.">
+  <title>Лабораторна робота №6 — CSS макет</title>
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js" defer></script>
@@ -23,7 +23,7 @@
       <ul class="menu-level-one">
         <li><a class="nav-link" href="../">Головна</a></li>
         <li class="has-submenu">
-          <a class="nav-link" href="#lab6">Лабораторні роботи <span aria-hidden="true">⌄</span></a>
+          <a class="nav-link" href="#section-1">Лабораторні роботи <span aria-hidden="true">⌄</span></a>
           <ol class="menu-level-two">
             <li><a href="../lab1/index.html">Lab1 — Лабораторна робота №1</a></li>
             <li><a href="../lab2/index.html">Lab2 — Створення меню сайту</a></li>
@@ -38,67 +38,63 @@
     </div>
   </nav>
 
-  <main class="page-shell single-column lab6-shell">
-    <article class="main-content">
-      <section class="hero-card lab6-hero" id="lab6" aria-labelledby="lab6-title">
-        <p class="eyebrow">Лабораторна робота №6</p>
-        <h1 id="lab6-title">Макет сторінки журналу</h1>
-        <p class="lead">Плаваючий елемент, багатоколонковий текст і модальне вікно на одній адаптивній вебсторінці.</p>
-        <div class="hero-meta"><span>CSS float</span><span>Multicolumn Layout</span><span>position · z-index</span></div>
+  <main class="lab6-page">
+    <article class="lab6-article">
+      <header class="lab6-titlebar">
+        <h1>Лабораторна робота №6</h1>
+      </header>
+
+      <section class="lab6-section" id="section-1" aria-labelledby="section-1-title">
+        <h2 id="section-1-title">Секція 1: Обтікання тексту</h2>
+        <img class="float-image" src="img/image.svg" alt="Зелена SVG-ілюстрація з написом SVG Image">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, felis ut porttitor convallis, velit nisi fringilla nunc, nec malesuada libero nulla sit amet neque. Ut et velit a sapien facilisis viverra sit amet a risus. Integer et velit nec odio tincidunt posuere at eget eros. Nullam auctor ex sed magna fermentum, eget scelerisque lacus malesuada. Aenean fringilla ante ut ligula sollicitudin. Sed a eros vitae ligula venenatis malesuada. Curabitur malesuada, magna et sodales euismod, felis erat rutrum justo.</p>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non eros vel nisi dapibus lacinia nec vel augue. Integer scelerisque magna vel mi vestibulum, quis ultricies ex faucibus. Vivamus condimentum mi quis magna vehicula sagittis. Donec at arcu sed nunc sodales posuere. Vestibulum scelerisque id eros non lacinia. Mauris eu risus euismod, congue sapien quis, fermentum felis.</p>
+        <p class="text clear">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue libero justo, ut facilisis magna pretium et. Vivamus varius nunc sed fermentum viverra. Mauris suscipit tristique nisl, ut auctor eros hendrerit nec. Nullam interdum at lacus nec vehicula. Aliquam posuere risus sit amet malesuada mollis. Donec et ex vel arcu fermentum volutpat.</p>
+        <img class="float-image" src="img/image.svg" alt="Друга зелена SVG-ілюстрація">
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, felis ut porttitor convallis, velit nisi fringilla nunc, nec malesuada libero nulla sit amet neque. Ut et velit a sapien facilisis viverra sit amet a risus. Integer et velit nec odio tincidunt posuere at eget eros. Nullam auctor ex sed magna fermentum, eget scelerisque lacus malesuada. Aenean fringilla ante ut ligula sollicitudin. Sed a eros vitae ligula venenatis malesuada. Curabitur malesuada, magna et sodales euismod, felis erat rutrum justo.</p>
+        <p class="text clear">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non eros vel nisi dapibus lacinia nec vel augue. Integer scelerisque magna vel mi vestibulum, quis ultricies ex faucibus. Vivamus condimentum mi quis magna vehicula sagittis. Donec at arcu sed nunc sodales posuere. Vestibulum scelerisque id eros non lacinia. Mauris eu risus euismod, congue sapien quis, fermentum felis.</p>
+        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue libero justo, ut facilisis magna pretium et. Vivamus varius nunc sed fermentum viverra. Mauris suscipit tristique nisl, ut auctor eros hendrerit nec. Nullam interdum at lacus nec vehicula. Aliquam posuere risus sit amet malesuada mollis. Donec et ex vel arcu fermentum volutpat.</p>
       </section>
 
-      <section class="lab6-overview" aria-labelledby="overview-title">
-        <div class="section-heading"><span class="section-index">01</span><h2 id="overview-title">Ідея макета</h2></div>
-        <figure class="lab6-illustration">
-          <img src="img/image.svg" alt="Схематичний малюнок ноутбука з розміткою сторінки">
-          <figcaption>Вебсторінка починається зі структури й композиції.</figcaption>
-        </figure>
-        <p>У цьому навчальному макеті коротка ілюстрація розташована ліворуч, а текст обтікає її завдяки властивості <code>float</code>. Після вступу матеріал розбитий на дві колонки. Кнопка внизу праворуч закріплена відносно вікна, а натискання відкриває модальну картку над сторінкою.</p>
-        <p class="lab6-clear">Текст після плаваючої ілюстрації повертається до звичайного потоку, бо контейнер очищує обтікання через <code>clear: both</code>.</p>
-      </section>
-
-      <section class="lab6-article" aria-labelledby="article-title">
-        <div class="section-heading"><span class="section-index">02</span><h2 id="article-title">Вебсторінка як простір для читання</h2></div>
-        <div class="lab6-columns">
-          <p>Добре спроєктована сторінка допомагає читачеві швидко знайти головну думку. Заголовки задають послідовність, короткі абзаци полегшують перегляд, а достатній міжрядковий інтервал робить текст зручним для тривалого читання. На широкому екрані матеріал можна подати в кілька колонок, зберігаючи природний порядок тексту.</p>
-          <p>Багатоколонкове компонування CSS створює газетний ритм без ручного поділу тексту на окремі контейнери. Властивості <code>column-count</code>, <code>column-gap</code> і <code>column-rule</code> визначають кількість колонок, відстань між ними та роздільну лінію. На вузькому екрані кількість колонок зменшується, щоб рядки залишалися читабельними.</p>
-          <p>Плаваючий елемент корисний, коли невелике зображення має бути поруч із текстом. Значення <code>float: left</code> або <code>float: right</code> виводить його до краю контейнера, а рядки тексту обтікають зображення. Для завершення обтікання застосовують <code>clear</code> або сучасний контейнерний прийом із псевдоелементом.</p>
-          <p>Модальне вікно є окремим шаром поверх основного вмісту. Для нього важливі затемнення фону, зрозуміла кнопка закриття, керування клавіатурою та правильний порядок накладання. У цій роботі використано вбудований елемент <code>&lt;dialog&gt;</code>, метод <code>showModal()</code> і кнопки, що закривають діалог.</p>
-          <p>Позиціонування визначає, де елемент розташований відносно документа або батьківського контейнера. <code>relative</code> зберігає місце елемента у потоці й задає контекст для абсолютно позиціонованих нащадків. <code>fixed</code> прив’язує плаваючу кнопку до вікна перегляду, а <code>z-index</code> допомагає поставити її та модальне вікно на потрібні шари.</p>
-          <p>На малих екранах сітка і багатоколонковий текст перебудовуються в одну колонку. Кнопки мають достатній розмір для дотику, фокус помітний із клавіатури, а модальне вікно не виходить за межі екрана. Так CSS-приклади працюють і як демонстрація властивостей, і як цілісна сторінка.</p>
+      <section class="lab6-section" id="section-2" aria-labelledby="section-2-title">
+        <h2 id="section-2-title">Секція 2: Багатоколонковий макет</h2>
+        <div class="multicolumn-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, felis ut porttitor convallis, velit nisi fringilla nunc. Ut et velit a sapien facilisis viverra sit amet a risus. Integer et velit nec odio tincidunt posuere at eget eros. Nullam auctor ex sed magna fermentum, eget scelerisque lacus malesuada. Aenean fringilla ante ut ligula sollicitudin. Donec volutpat nisl at risus tincidunt, vitae tempus nulla vulputate.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque magna vel mi vestibulum, quis ultricies ex faucibus. Vivamus condimentum mi quis magna vehicula sagittis. Vestibulum scelerisque id eros non lacinia. Mauris eu risus euismod, congue sapien quis, fermentum felis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue libero justo, ut facilisis magna pretium et. Vivamus varius nunc sed fermentum viverra. Mauris suscipit tristique nisl, ut auctor eros hendrerit nec. Nullam interdum at lacus nec vehicula. Aliquam posuere risus sit amet malesuada mollis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, felis ut porttitor convallis, velit nisi fringilla nunc. Ut et velit a sapien facilisis viverra sit amet a risus. Integer et velit nec odio tincidunt posuere at eget eros. Nullam auctor ex sed magna fermentum, eget scelerisque lacus malesuada. Aenean fringilla ante ut ligula sollicitudin. Donec volutpat nisl at risus tincidunt, vitae tempus nulla vulputate.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque magna vel mi vestibulum, quis ultricies ex faucibus. Vivamus condimentum mi quis magna vehicula sagittis. Vestibulum scelerisque id eros non lacinia. Mauris eu risus euismod, congue sapien quis, fermentum felis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue libero justo, ut facilisis magna pretium et. Vivamus varius nunc sed fermentum viverra. Mauris suscipit tristique nisl, ut auctor eros hendrerit nec. Nullam interdum at lacus nec vehicula. Aliquam posuere risus sit amet malesuada mollis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, felis ut porttitor convallis, velit nisi fringilla nunc. Ut et velit a sapien facilisis viverra sit amet a risus. Integer et velit nec odio tincidunt posuere at eget eros. Nullam auctor ex sed magna fermentum, eget scelerisque lacus malesuada. Aenean fringilla ante ut ligula sollicitudin. Donec volutpat nisl at risus tincidunt, vitae tempus nulla vulputate.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque magna vel mi vestibulum, quis ultricies ex faucibus. Vivamus condimentum mi quis magna vehicula sagittis. Vestibulum scelerisque id eros non lacinia. Mauris eu risus euismod, congue sapien quis, fermentum felis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue libero justo, ut facilisis magna pretium et. Vivamus varius nunc sed fermentum viverra. Mauris suscipit tristique nisl, ut auctor eros hendrerit nec. Nullam interdum at lacus nec vehicula. Aliquam posuere risus sit amet malesuada mollis.</p>
         </div>
       </section>
 
-      <section class="lab6-demo" aria-labelledby="demo-title">
-        <div>
-          <p class="eyebrow">Інтерактивний елемент</p>
-          <h2 id="demo-title">Відкрий модальне вікно</h2>
-          <p>Натисни кнопку, щоб побачити окремий шар із коротким описом використаних властивостей.</p>
-        </div>
-        <button class="lab6-open-button" type="button" data-open-dialog>Відкрити опис роботи</button>
+      <section class="lab6-section" id="section-3" aria-labelledby="section-3-title">
+        <h2 id="section-3-title">Секція 3: Модальне вікно — email-підписка</h2>
+        <button class="subscribe-button" id="subscribe-button" type="button">Підписатися</button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque magna vel mi vestibulum, quis ultricies ex faucibus. Vivamus condimentum mi quis magna vehicula sagittis. Vestibulum scelerisque id eros non lacinia.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue libero justo, ut facilisis magna pretium et. Vivamus varius nunc sed fermentum viverra. Mauris suscipit tristique nisl, ut auctor eros hendrerit nec.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt nisi sit amet velit dictum, in suscipit libero aliquam. Suspendisse auctor sapien nec ligula dictum, eget efficitur purus malesuada.</p>
+        <p class="lab6-disclaimer">Демонстраційна форма перевіряє адресу браузером і не надсилає її на сервер.</p>
       </section>
-
-      <aside class="lab6-note" aria-label="Використані CSS властивості">
-        <strong>У макеті використано:</strong>
-        <span>float і clear</span><span>column-count і column-gap</span><span>position: fixed</span><span>z-index та dialog</span>
-      </aside>
     </article>
   </main>
 
-  <button class="lab6-floating-button" type="button" data-open-dialog aria-label="Відкрити інформацію про макет">i</button>
-
-  <dialog class="lab6-dialog" aria-labelledby="dialog-title">
-    <div class="lab6-dialog-card">
-      <button class="lab6-dialog-close" type="button" data-close-dialog aria-label="Закрити вікно">×</button>
-      <p class="eyebrow">Довідка · лабораторна №6</p>
-      <h2 id="dialog-title">Плаваючі та модальні елементи</h2>
-      <p>Ілюстрація демонструє <code>float</code>, текстовий блок — CSS columns, а це вікно — модальний шар із керуванням через <code>position</code> і <code>z-index</code>.</p>
-      <ul>
-        <li>Плаваюче зображення обтікається вступним текстом.</li>
-        <li>Основний матеріал автоматично ділиться на колонки.</li>
-        <li>Кнопка закриває вікно; клавіша Escape теж працює.</li>
-      </ul>
-      <button class="lab6-open-button" type="button" data-close-dialog>Зрозуміло</button>
+  <dialog class="subscribe-modal" id="modal" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Закрити вікно">×</button>
+      <h2 id="modal-title">Підписка на оновлення</h2>
+      <p>Залиш адресу електронної пошти, щоб побачити роботу поля форми та HTML5-валідації.</p>
+      <form id="subscribe-form">
+        <label for="email">Введіть вашу електронну пошту:</label>
+        <div class="email-row">
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+          <button class="save-button" type="submit">Зберегти</button>
+        </div>
+      </form>
+      <p class="modal-status" id="modal-status" role="status" aria-live="polite"></p>
     </div>
   </dialog>
 
