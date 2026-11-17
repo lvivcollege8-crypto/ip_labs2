@@ -1,21 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
-  <title id="title">Ілюстрація навчальної вебсторінки</title>
-  <desc id="desc">Ноутбук із синім екраном, текстовими рядками та плаваючою карткою.</desc>
-  <rect x="35" y="26" width="250" height="150" rx="14" fill="#1f3f83"/>
-  <rect x="46" y="38" width="228" height="124" rx="8" fill="#f7f9ff"/>
-  <rect x="58" y="51" width="204" height="20" rx="5" fill="#dfe9ff"/>
-  <circle cx="69" cy="61" r="3" fill="#2c60dc"/><circle cx="80" cy="61" r="3" fill="#82a4f3"/>
-  <rect x="60" y="84" width="112" height="8" rx="4" fill="#315ec4"/>
-  <rect x="60" y="100" width="116" height="5" rx="2.5" fill="#c3cede"/>
-  <rect x="60" y="111" width="105" height="5" rx="2.5" fill="#c3cede"/>
-  <rect x="60" y="122" width="110" height="5" rx="2.5" fill="#c3cede"/>
-  <rect x="60" y="137" width="74" height="12" rx="6" fill="#c9f2dd"/>
-  <rect x="184" y="83" width="69" height="65" rx="8" fill="#eaf1ff"/>
-  <rect x="194" y="94" width="49" height="6" rx="3" fill="#5580dd"/>
-  <rect x="194" y="107" width="39" height="4" rx="2" fill="#b8c6df"/>
-  <rect x="194" y="116" width="44" height="4" rx="2" fill="#b8c6df"/>
-  <rect x="194" y="129" width="35" height="10" rx="5" fill="#2c60dc"/>
-  <path d="M18 180h284l-24 20H42z" fill="#315ec4"/>
-  <path d="M42 181h236l-8 7H50z" fill="#8eabef"/>
-  <circle cx="267" cy="42" r="18" fill="#c9f2dd"/><path d="M260 42h14M267 35v14" stroke="#236c49" stroke-width="3" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250" role="img" aria-labelledby="title">
+  <title id="title">SVG Image</title>
+  <rect width="250" height="250" fill="#4CAF50" />
+  <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white" font-size="24" font-family="Arial, sans-serif">SVG Image</text>
 </svg>
