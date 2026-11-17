@@ -1,0 +1,123 @@
+/* Лабораторна №5: відтворення блоку header#events_container сайту lpnu.ua.
+   Вимірювання виконано в Chrome DevTools (Elements / Computed) 17.11.2026. */
+#events_container{
+  box-sizing:border-box;
+  width:100%;
+  margin:26px 0 0;
+  padding:30px 0;
+  border:0;
+  color:#333;
+  background-color:#252775;
+  font-family:"Roboto Condensed",Arial,sans-serif;
+  font-size:16px;
+  font-weight:400;
+  line-height:1.43;
+}
+#events_container .events-inner{
+  box-sizing:border-box;
+  width:min(1140px, calc(100% - 40px));
+  margin:0 auto;
+}
+#events_container .events-section{margin:0;padding:0;}
+#events_container .events-heading{
+  margin:0 0 22px;
+  padding:0;
+  text-align:center;
+}
+#events_container .events-kicker{
+  margin:0 0 6px;
+  color:#d9def6;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+#events_container h2{
+  margin:15px 0 30px;
+  padding:0;
+  color:#fff;
+  font-family:"Roboto Condensed",Arial,sans-serif;
+  font-size:28px;
+  font-weight:500;
+  line-height:1.1;
+}
+#events_container h2 a{color:inherit;text-decoration:none;}
+#events_container h2 a:hover,
+#events_container h2 a:focus-visible{text-decoration:underline;}
+#events_container .events-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  align-items:stretch;
+}
+#events_container .event-card{
+  min-width:0;
+  margin:0;
+  padding:0 0 14px;
+  overflow:hidden;
+  background-color:#fff;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:5px;
+}
+#events_container .event-card>a{
+  display:block;
+  height:100%;
+  color:#0076a8;
+  text-decoration:none;
+}
+#events_container .event-card img{
+  display:block;
+  width:100%;
+  height:150px;
+  margin:0;
+  padding:0;
+  border:0;
+  object-fit:cover;
+  background-color:#f6f6f6;
+}
+#events_container .event-date{
+  min-height:56px;
+  margin:0;
+  padding:12px 14px 4px;
+  color:#0076a8;
+  font-size:13px;
+  font-weight:600;
+  line-height:1.45;
+}
+#events_container h3{
+  min-height:95px;
+  margin:0;
+  padding:8px 14px 14px;
+  color:#0076a8;
+  background-color:#f6f6f6;
+  font-family:"Roboto Condensed",Arial,sans-serif;
+  font-size:18px;
+  font-weight:500;
+  line-height:1.1;
+}
+#events_container .event-card>a:hover h3,
+#events_container .event-card>a:focus-visible h3{color:#004e70;text-decoration:underline;}
+#events_container .events-source{
+  margin:20px 0 0;
+  padding:0;
+  color:#e2e4f8;
+  font-size:12px;
+  line-height:1.6;
+}
+#events_container .events-source a{color:#fff;}
+.lab5-intro,.lab5-notes{margin-top:28px;}
+.lab5-intro p{color:#5f6e84;}
+.lab5-observation{padding:16px 18px;background:#fff;border:1px solid #e6ebf1;border-radius:12px;}
+@media(max-width:760px){
+  #events_container .events-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  #events_container .event-card img{height:130px;}
+  #events_container h3{min-height:110px;font-size:16px;}
+}
+@media(max-width:480px){
+  #events_container{margin-top:20px;padding:24px 0;}
+  #events_container .events-inner{width:calc(100% - 28px);}
+  #events_container h2{font-size:23px;margin-bottom:20px;}
+  #events_container .events-grid{grid-template-columns:1fr;}
+  #events_container .event-card img{height:auto;aspect-ratio:2.1/1;}
+  #events_container h3{min-height:0;}
+}
