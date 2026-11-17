@@ -9,15 +9,19 @@
 - `lab2/index.html` — лабораторна №2 про створення меню.
 - `lab3/index.html` — сторінка лабораторної №3 з графікою й мультимедіа.
 - `lab4/index.html` — адаптивна анкета студента з вбудованою HTML5-валідацією.
+- `lab5/index.html` — лабораторна №5 з блоковим компонуванням.
+- `lab6/index.html` — сторінка за наданим прототипом: float/clear, CSS-колонки та модальна форма.
 - `lab3/map.html` — локальний приклад інтерактивної карти; сторінка Lab3 вбудовує Google My Maps.
 - `assets/style.css` — спільні адаптивні стилі.
 - `assets/lab4.css`, `assets/lab4.js` — стилі й безпечна локальна взаємодія форми.
 - `assets/college-logo.jpg`, `assets/ukraine-flag-video.mp4`, `assets/student-audio.m4a` — ресурси Lab3. MP4 — наданий ролик до Дня Державного прапора України.
-- `LAB3_CHEATSHEET.md` і `LAB4_CHEATSHEET.md` — шпаргалки до захисту.
+- `LAB3_CHEATSHEET.md`, `LAB4_CHEATSHEET.md` — шпаргалки до захисту.
+
+- `lab6/css/styles.css`, `lab6/js/main.js`, `lab6/img/image.svg` — стилі, локальна взаємодія й SVG для лабораторної №6.
 
 ## GitHub
 
-Публічний репозиторій: https://github.com/lvivcollege8-crypto/ip_labs2. Лабораторну №4 додано окремою гілкою `lab4` і злито в головну гілку `main`.
+Публічний репозиторій: https://github.com/lvivcollege8-crypto/ip_labs2. Лабораторну №4 додано окремою гілкою `lab4` і злито в `main`. Лабораторну №6 розгорнуто з `main`.
 
 ## Netlify
 
@@ -38,3 +42,4 @@
 ## Локальний запуск
 
 У корені проєкту запусти `python3 -m http.server 8000` і відкрий `http://localhost:8000`. Потрібен доступ до Інтернету для зовнішніх відео/карт.
+\n## Лабораторна робота №6\n\nСторінка: https://bespoke-dango-45b158.netlify.app/lab6/. Реалізовано float/clear, багатоколонковий текст, sticky і fixed позиціонування та модальне вікно з локальною валідацією. Дані форми не передаються на сервер.\n
