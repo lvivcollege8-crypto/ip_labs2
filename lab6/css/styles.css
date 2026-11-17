@@ -1,46 +1,254 @@
-/* Лабораторна №6: float, multicolumn layout, position та z-index. */
-.lab6-shell{max-width:1060px;margin-top:34px}
-.lab6-hero{background:linear-gradient(120deg,#192e60,#2f62ce 70%,#5092ee)}
-.lab6-overview,.lab6-article{margin-top:28px;padding:28px 30px;background:#fff;border:1px solid #e6ebf1;border-radius:18px;box-shadow:0 12px 40px rgba(28,48,82,.05)}
-.lab6-overview>p{color:#58677e;font-size:15px;line-height:1.85}
-.lab6-illustration{float:left;width:190px;margin:4px 22px 12px 0;padding:12px;background:#edf4ff;border:1px solid #dce8ff;border-radius:16px}
-.lab6-illustration img{display:block;width:100%;height:auto}
-.lab6-illustration figcaption{margin-top:8px;color:#63728a;font-size:11px;line-height:1.4}
-.lab6-clear{clear:both}
-.lab6-columns{column-count:2;column-gap:34px;column-rule:1px solid #e4eaf2;color:#58677e;font-size:14px;line-height:1.85}
-.lab6-columns p{margin:0 0 15px;break-inside:avoid}
-.lab6-columns code,.lab6-overview code,.lab6-dialog code{padding:2px 5px;border-radius:5px;background:#eef3ff;color:#244da8;font-size:.92em}
-.lab6-demo{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:24px;padding:25px 30px;background:#eaf4ee;border:1px solid #d5eade;border-radius:18px}
-.lab6-demo .eyebrow{color:#28784e;margin-bottom:6px}
-.lab6-demo h2{margin:0 0 6px;font-size:21px}
-.lab6-demo p:last-child{margin:0;color:#527061;font-size:13px}
-.lab6-open-button{border:0;border-radius:12px;padding:12px 18px;background:#285be7;color:#fff;font:inherit;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(40,91,231,.18)}
-.lab6-open-button:hover{background:#1f4dcc}
-.lab6-open-button:focus-visible,.lab6-floating-button:focus-visible,.lab6-dialog-close:focus-visible{outline:3px solid #81a4ff;outline-offset:3px}
-.lab6-note{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding:18px 20px;background:#fff;border:1px solid #e6ebf1;border-radius:15px;color:#63728a;font-size:12px}
-.lab6-note strong{color:#25334a}
-.lab6-note span{padding:4px 8px;background:#f2f5fb;border-radius:99px}
-.lab6-floating-button{position:fixed;right:24px;bottom:24px;z-index:20;width:54px;height:54px;border:0;border-radius:50%;background:#172d5f;color:#fff;font-size:22px;font-weight:800;box-shadow:0 12px 32px rgba(21,43,91,.3);cursor:pointer}
-.lab6-dialog{position:fixed;inset:0;z-index:1000;width:min(520px,calc(100% - 32px));max-width:none;max-height:calc(100% - 32px);padding:0;border:1px solid rgba(255,255,255,.65);border-radius:22px;color:#172437;background:transparent;box-shadow:0 28px 90px rgba(7,21,50,.3);overflow:visible}
-.lab6-dialog::backdrop{background:rgba(13,25,47,.62);backdrop-filter:blur(3px)}
-.lab6-dialog-card{position:relative;padding:32px;background:#fff;border-radius:22px}
-.lab6-dialog-card .eyebrow{color:#285be7}
-.lab6-dialog-card h2{margin:0 34px 12px 0;font-size:25px;line-height:1.2;letter-spacing:-.03em}
-.lab6-dialog-card p,.lab6-dialog-card li{color:#627188;font-size:14px;line-height:1.7}
-.lab6-dialog-card ul{padding-left:20px}
-.lab6-dialog-close{position:absolute;top:13px;right:14px;width:38px;height:38px;border:0;border-radius:50%;background:#f0f3f8;color:#28364b;font-size:25px;cursor:pointer}
-@media(max-width:760px){
-  .lab6-shell{padding-inline:16px;margin-top:22px}
-  .lab6-overview,.lab6-article{padding:22px 20px}
-  .lab6-illustration{width:150px;margin-right:16px}
-  .lab6-columns{column-count:1;column-gap:0;column-rule:0}
-  .lab6-demo{align-items:flex-start;flex-direction:column;padding:22px}
-  .lab6-open-button{width:100%}
+/* Лабораторна №6: float, clear, багатоколонковий макет і позиціонування. */
+
+.lab6-page {
+  width: 100%;
+  margin: 0 auto;
+  background: #e9edf2;
+  color: #232b36;
 }
-@media(max-width:480px){
-  .lab6-illustration{float:none;width:min(220px,100%);margin:0 auto 18px}
-  .lab6-clear{clear:both}
-  .lab6-floating-button{right:16px;bottom:16px}
-  .lab6-dialog-card{padding:26px 22px}
-  .lab6-dialog-card h2{font-size:22px}
+
+.lab6-article {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 0 22px 32px;
+}
+
+.lab6-titlebar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin: 0 -22px 0;
+  padding: 14px 18px;
+  color: #fff;
+  background: #2e6135;
+  text-align: center;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
+}
+
+.lab6-titlebar h1 {
+  margin: 0;
+  font-size: clamp(18px, 2.4vw, 26px);
+  line-height: 1.35;
+}
+
+.lab6-section {
+  margin: 18px 0 24px;
+  padding: 0 0 20px;
+  background: #f6f6f6;
+  border: 1px solid #d9dee5;
+  border-radius: 8px;
+  box-shadow: 0 5px 18px rgb(27 43 61 / 5%);
+}
+
+.lab6-section h2 {
+  position: sticky;
+  top: 57px;
+  z-index: 5;
+  margin: 0 0 16px;
+  padding: 12px 18px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #d5d9df;
+  color: #273344;
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.35;
+}
+
+.lab6-section > p,
+.lab6-section > img,
+.multicolumn-text {
+  margin-right: 18px;
+  margin-left: 18px;
+}
+
+.lab6-section p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.float-image {
+  float: left;
+  width: 125px;
+  height: 125px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-right: 16px;
+  border: 1px solid #d5ded5;
+  object-fit: cover;
+}
+
+.text {
+  text-align: justify;
+}
+
+.clear {
+  clear: both;
+}
+
+.multicolumn-text {
+  column-width: 300px;
+  column-gap: 24px;
+  column-rule: 1px solid #d5d9df;
+  color: #394452;
+}
+
+.multicolumn-text p {
+  margin: 0 0 14px;
+  text-align: justify;
+  break-inside: avoid;
+}
+
+.subscribe-button,
+.save-button {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 18px;
+  background: #4caf50;
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.subscribe-button:hover,
+.save-button:hover {
+  background: #388e3c;
+}
+
+.subscribe-button:focus-visible,
+.save-button:focus-visible,
+.modal-close:focus-visible,
+.subscribe-modal input:focus-visible {
+  outline: 3px solid #2261d7;
+  outline-offset: 3px;
+}
+
+.lab6-disclaimer {
+  color: #596779;
+  font-size: 13px !important;
+}
+
+.subscribe-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: min(560px, calc(100% - 28px));
+  max-width: none;
+  max-height: min(620px, calc(100% - 28px));
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #d9dee5;
+  border-radius: 10px;
+  background: #fff;
+  color: #242b35;
+  box-shadow: 0 18px 60px rgb(0 0 0 / 32%);
+}
+
+.subscribe-modal::backdrop {
+  background: rgb(0 0 0 / 54%);
+}
+
+.modal-content {
+  position: relative;
+  min-height: 360px;
+  padding: 28px;
+}
+
+.modal-content h2 {
+  margin: 8px 34px 8px 0;
+  font-size: 22px;
+}
+
+.modal-content p,
+.modal-content label {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #eef1f4;
+  color: #283241;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.email-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.subscribe-modal input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid #8b929b;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.modal-status {
+  min-height: 1.5em;
+  color: #28743b;
+  font-weight: 700;
+}
+
+@media (max-width: 680px) {
+  .lab6-article {
+    padding: 0 12px 20px;
+  }
+
+  .lab6-titlebar {
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+
+  .lab6-section h2 {
+    top: 53px;
+    padding: 11px 13px;
+  }
+
+  .lab6-section > p,
+  .lab6-section > img,
+  .multicolumn-text {
+    margin-right: 13px;
+    margin-left: 13px;
+  }
+
+  .multicolumn-text {
+    column-width: 260px;
+    column-gap: 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  .float-image {
+    width: 92px;
+    height: 92px;
+    margin-right: 12px;
+  }
+
+  .lab6-section p {
+    font-size: 13px;
+  }
+
+  .modal-content {
+    min-height: 300px;
+    padding: 24px 18px;
+  }
+
+  .email-row {
+    flex-direction: column;
+  }
 }
