@@ -1,16 +1,22 @@
-/* Керування доступним нативним модальним вікном. */
-const lab6Dialog = document.querySelector(".lab6-dialog");
+// Керування доступним нативним модальним вікном і демонстраційною формою.
+const subscribeButton = document.querySelector("#subscribe-button");
+const modal = document.querySelector("#modal");
+const closeButton = document.querySelector(".modal-close");
+const form = document.querySelector("#subscribe-form");
+const status = document.querySelector("#modal-status");
 
-document.querySelectorAll("[data-open-dialog]").forEach((button) => {
-  button.addEventListener("click", () => {
-    if (lab6Dialog && !lab6Dialog.open) lab6Dialog.showModal();
-  });
+subscribeButton?.addEventListener("click", () => {
+  status.textContent = "";
+  modal?.showModal();
 });
 
-document.querySelectorAll("[data-close-dialog]").forEach((button) => {
-  button.addEventListener("click", () => lab6Dialog?.close());
+closeButton?.addEventListener("click", () => modal?.close());
+
+modal?.addEventListener("click", (event) => {
+  if (event.target === modal) modal.close();
 });
 
-lab6Dialog?.addEventListener("click", (event) => {
-  if (event.target === lab6Dialog) lab6Dialog.close();
+form?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  status.textContent = "Адресу перевірено. Демонстраційна форма не надсилає дані на сервер.";
 });
