@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторна робота №5: дослідження блочної моделі, шрифтів, кольорів і Chrome DevTools на прикладі сайту Львівської політехніки.">
+  <title>Лабораторна №5 — CSS та Developer Tools</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="На головну сторінку">
+      <span class="brand-mark" aria-hidden="true">PI</span>
+      <span>Програмування в Internet</span>
+    </a>
+    <p class="student-line">Чонка Максим Андрійович <span>·</span> ІП-41</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Основна навігація">
+    <div class="nav-inner">
+      <ul class="menu-level-one">
+        <li><a class="nav-link" href="../">Головна</a></li>
+        <li class="has-submenu">
+          <a class="nav-link" href="#lab5">Лабораторні роботи <span aria-hidden="true">⌄</span></a>
+          <ol class="menu-level-two">
+            <li><a href="../lab1/index.html">Lab1 — Лабораторна робота №1</a></li>
+            <li><a href="../lab2/index.html">Lab2 — Створення меню сайту</a></li>
+            <li><a href="../lab3/index.html">Lab3 — Графіка та мультимедіа</a></li>
+            <li><a href="../lab4/index.html">Lab4 — Анкета студента</a></li>
+            <li><a href="./index.html" aria-current="page">Lab5 — CSS і Developer Tools</a></li>
+          </ol>
+        </li>
+      </ul>
+      <span class="nav-note">Лабораторна робота №5 · 2026</span>
+    </div>
+  </nav>
+
+  <main class="page-shell single-column lab5-shell">
+    <article class="main-content lab5-content">
+      <section class="hero-card lab5-hero" id="lab5" aria-labelledby="lab5-title">
+        <p class="eyebrow">Лабораторна робота №5</p>
+        <h1 id="lab5-title">CSS і Chrome Developer Tools</h1>
+        <p class="lead">Дослідження блочної моделі, шрифтів і кольорів на прикладі сторінки Національного університету «Львівська політехніка».</p>
+        <div class="hero-meta"><span>Варіант 4 · № у журналі 20</span><span>Селектор header#events_container</span></div>
+      </section>
+
+      <section class="lab5-intro" aria-labelledby="intro-title">
+        <div class="section-heading"><span class="section-index">01</span><h2 id="intro-title">Дослідження сторінки</h2></div>
+        <p>На головній сторінці <a href="https://lpnu.ua/" target="_blank" rel="noopener noreferrer">lpnu.ua</a> у поточній версії знайдено 5 елементів <code>&lt;header&gt;</code>. Для варіанта 4 за методичкою використано блок <code>header#events_container</code> — секцію майбутніх подій університету.</p>
+        <p class="lab5-observation">У блоці-оригіналі відображаються заголовок «Незабаром у Львівській політехніці» та шість карток подій. Структуру й назви подій перенесено до навчальної сторінки, а зовнішній вигляд відтворено власними правилами CSS за виміряними значеннями DevTools.</p>
+      </section>
+
+      <header id="events_container" aria-labelledby="events-title">
+        <div class="events-inner">
+          <section class="events-section" aria-label="Майбутні події Львівської політехніки">
+            <div class="events-heading">
+              <p class="events-kicker">Національний університет «Львівська політехніка»</p>
+              <h2 id="events-title"><a href="https://lpnu.ua/events" target="_blank" rel="noopener noreferrer">Незабаром у Львівській політехніці</a></h2>
+            </div>
+            <div class="events-grid">
+              <article class="event-card">
+                <a href="https://lpnu.ua/events/xii-mizhnarodnyi-molodizhnyi-naukovyi-forum-litteris-et-artibus-lea-2026" target="_blank" rel="noopener noreferrer">
+                  <img src="https://lpnu.ua/sites/default/files/styles/event_teaser/public/2026/10/29/events/38206/yafisha.jpg?itok=VTwd-h3p" alt="Афіша форуму Litteris et Artibus">
+                  <p class="event-date"><time datetime="2026-11-19T09:00">19 листопада, 09:00</time> — <time datetime="2026-11-20T15:00">20 листопада, 15:00</time></p>
+                  <h3>XII Міжнародний молодіжний науковий форум «Litteris et Artibus» (LEA-2026)</h3>
+                </a>
+              </article>
+              <article class="event-card">
+                <a href="https://lpnu.ua/events/zaproshuiemo-na-zustrich-meetup-z-khrystynoiu-telychko-competence-operations-lead-v-kompanii" target="_blank" rel="noopener noreferrer">
+                  <img src="https://lpnu.ua/sites/default/files/styles/event_teaser/public/2026/11/12/events/38463/tttelichko-khristinafeysbuk.jpg?itok=To_f8MeC" alt="Зображення зустрічі MeetUp">
+                  <p class="event-date"><time datetime="2026-11-19T13:00">19 листопада, 13:00</time> — <time datetime="2026-11-19T15:00">15:00</time></p>
+                  <h3>Зустріч MeetUp з Христиною Теличко, Competence Operations Lead у N-iX</h3>
+                </a>
+              </article>
+              <article class="event-card">
+                <a href="https://lpnu.ua/events/v-mizhnarodna-studentska-naukovo-praktychna-konferentsiia-orhanizatsiini-pravovi-ta" target="_blank" rel="noopener noreferrer">
+                  <img src="https://lpnu.ua/sites/default/files/styles/event_teaser/public/2026/10/16/events/38028/1geminigeneratedimagesikc0esikc0esikc.jpg?itok=ELi4JSD-" alt="Афіша студентської науково-практичної конференції">
+                  <p class="event-date"><time datetime="2026-11-26T09:30">26 листопада, 09:30</time> — <time datetime="2026-11-26T18:00">18:00</time></p>
+                  <h3>V Міжнародна студентська конференція про професійну мобільність у період війни</h3>
+                </a>
+              </article>
+              <article class="event-card">
+                <a href="https://lpnu.ua/events/ikh-mizhnarodna-naukovo-praktychna-konferentsiia-ukrainska-mova-u-sviti-deukrainizatsiia" target="_blank" rel="noopener noreferrer">
+                  <img src="https://lpnu.ua/sites/default/files/styles/event_teaser/public/2026/10/30/events/38222/55afisha4-1536x806.jpg?itok=GX4H2O_B" alt="Афіша конференції про українську мову у світі">
+                  <p class="event-date"><time datetime="2026-11-26T10:00">26 листопада, 10:00</time> — <time datetime="2026-11-26T16:00">16:00</time></p>
+                  <h3>ІХ Міжнародна науково-практична конференція «Українська мова у світі. [ДЕ]українізація?»</h3>
+                </a>
+              </article>
+              <article class="event-card">
+                <a href="https://lpnu.ua/events/6-ta-mizhnarodna-konferentsiia-innovatsiini-materialy-ta-nanoinzheneriia-imne-2026" target="_blank" rel="noopener noreferrer">
+                  <img src="https://lpnu.ua/sites/default/files/styles/event_teaser/public/2026/10/8/events/37900/zastbanner-en-16-91x.jpg?itok=HDhaeSAn" alt="Банер конференції з інноваційних матеріалів і наноінженерії">
+                  <p class="event-date"><time datetime="2026-11-27T09:00">27 листопада, 09:00</time> — <time datetime="2026-11-29T16:00">29 листопада, 16:00</time></p>
+                  <h3>6-та Міжнародна конференція «Інноваційні матеріали та наноінженерія» (IMNE-2026)</h3>
+                </a>
+              </article>
+              <article class="event-card">
+                <a href="https://lpnu.ua/events/kruhlyi-stil-vriaduvannia-ta-biznes-suchasni-realii" target="_blank" rel="noopener noreferrer">
+                  <img src="https://lpnu.ua/sites/default/files/styles/event_teaser/public/2026/11/6/events/38349/im1g6639.jpg?itok=6KxcCy4M" alt="Зображення круглого столу про врядування та бізнес">
+                  <p class="event-date"><time datetime="2026-11-27T10:00">27 листопада, 10:00</time> — <time datetime="2026-11-27T15:00">15:00</time></p>
+                  <h3>Круглий стіл «Врядування та бізнес: сучасні реалії»</h3>
+                </a>
+              </article>
+            </div>
+            <p class="events-source">Назви подій, дати та зображення взято з відкритої сторінки подій ЛПНУ, яку переглянуто 17.11.2026. <a href="https://lpnu.ua/events" target="_blank" rel="noopener noreferrer">Відкрити оригінал</a>.</p>
+          </section>
+        </div>
+      </header>
+
+      <section class="lab5-notes" aria-labelledby="styles-title">
+        <div class="section-heading"><span class="section-index">02</span><h2 id="styles-title">Досліджені властивості CSS</h2></div>
+        <div class="note-panel"><span class="note-icon" aria-hidden="true">i</span><p><strong>Блочна модель:</strong> width, margin, padding, border, box-sizing. <strong>Шрифти:</strong> font-family, font-size, font-weight, line-height. <strong>Кольори:</strong> color, background-color, border-color. Значення CSS наведено у файлі <code>lab5/css/styles.css</code>.</p></div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer"><div><span>© 2026 Максим Чонка · ІП-41</span><span>Фаховий коледж інформаційних технологій НУ «Львівська політехніка»</span></div></footer>
+</body>
+</html>
