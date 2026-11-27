@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Адаптивна навчальна сторінка Львівської політехніки зі стилями SCSS.">
+  <title>Львівська політехніка — Лабораторна №8</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="lpnu-page">
+  <a class="skip-link" href="#main-content">Перейти до основного вмісту</a>
+  <header class="site-header">
+    <div class="header-main">
+      <a class="brand" href="https://lpnu.ua/" aria-label="Львівська політехніка — головна сторінка">
+        <span class="brand-mark" aria-hidden="true">ЛП</span>
+        <span class="brand-title"><strong>Львівська політехніка</strong><small>Національний університет</small></span>
+      </a>
+      <nav class="utility-nav" aria-label="Додаткова навігація">
+        <a href="https://lpnu.ua/university">Університет</a>
+        <a href="https://lpnu.ua/education">Освіта</a>
+        <a href="https://lpnu.ua/science">Наука</a>
+        <a href="https://lpnu.ua/international-activity">Міжнародна діяльність</a>
+      </nav>
+      <a class="search-button" href="https://lpnu.ua/search" aria-label="Пошук на сайті">⌕</a>
+    </div>
+    <nav class="section-nav" aria-label="Розділи сайту">
+      <a class="section-active" href="https://lpnu.ua/">Головна</a>
+      <a href="https://lpnu.ua/news">Новини</a>
+      <a href="https://lpnu.ua/events">Події</a>
+      <a href="https://lpnu.ua/applicants">Вступникам</a>
+      <a href="https://lpnu.ua/students">Студентам</a>
+      <a href="https://lpnu.ua/contacts">Контакти</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="page-container">
+    <section class="feature" aria-labelledby="feature-title">
+      <div class="feature-copy">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Новини університету · 2026</p>
+        <h1 id="feature-title">У Львівській політехніці презентували проєкт «Мапа хабів талантів України»</h1>
+        <p class="feature-lead">Ініціатива об’єднує освітні та інноваційні простори, щоб молодь могла знаходити нові можливості для розвитку.</p>
+        <a class="primary-link" href="https://lpnu.ua/">Читати новину <span aria-hidden="true">↗</span></a>
+        <p class="feature-date"><time datetime="2026-11-27">27 листопада 2026</time><span>·</span>Університет</p>
+      </div>
+      <div class="feature-visual" role="img" aria-label="Графічна композиція про освітні можливості та університетські спільноти">
+        <span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span>
+        <span class="visual-node node-one">ОСВІТА</span><span class="visual-node node-two">ІДЕЇ</span>
+        <span class="visual-node node-three">ЛЬВІВ</span><span class="visual-center">ЛП</span>
+        <span class="visual-caption">ЗНАННЯ<br>СТВОРЮЮТЬ<br>МОЖЛИВОСТІ</span>
+      </div>
+      <span class="feature-counter" aria-hidden="true">01 <i>/</i> 05</span>
+    </section>
+
+    <section class="event-strip" aria-labelledby="events-title">
+      <div class="event-heading"><p class="section-label">Календар університету</p><h2 id="events-title">Незабаром</h2></div>
+      <a class="event-item" href="https://lpnu.ua/">
+        <span class="event-date"><strong>27</strong><small>ЛИСТ</small></span>
+        <span class="event-copy"><strong>Міжнародна конференція «Інноваційні матеріали та наноінженерія»</strong><small>Наукова подія · Львів</small></span>
+        <span class="event-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="event-item" href="https://lpnu.ua/">
+        <span class="event-date"><strong>01</strong><small>ГРУ</small></span>
+        <span class="event-copy"><strong>Відкрита лекція про інституційну структуру національної економіки</strong><small>Публічна лекція · 11:40</small></span>
+        <span class="event-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section class="news-section" aria-labelledby="news-title">
+      <div class="section-heading">
+        <div><p class="section-label">Університет сьогодні</p><h2 id="news-title">Останні новини</h2></div>
+        <a class="text-link" href="https://lpnu.ua/news">Усі новини <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="news-grid">
+        <article class="news-card news-card-featured">
+          <a class="news-art art-exhibition" href="https://lpnu.ua/news" aria-label="Перейти до новини про виставку">
+            <span class="art-label">КУЛЬТУРА</span><span class="art-illustration exhibition-illustration" aria-hidden="true"><i></i><i></i><i></i></span><span class="art-bottom">МИСТЕЦТВО УНІВЕРСИТЕТУ</span>
+          </a>
+          <div class="news-body"><p class="news-meta"><time datetime="2026-11-27">27 листопада 2026</time><span>Події</span></p><h3><a href="https://lpnu.ua/news">Запрошуємо відвідати виставку «Казкові вітражні будиночки Остапа Павловського-Лісогорського»</a></h3><p>Університетська бібліотека запрошує познайомитися з роботами львівського митця.</p><a class="read-more" href="https://lpnu.ua/news">Читати далі <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="news-card">
+          <a class="news-art art-partnership" href="https://lpnu.ua/news" aria-label="Перейти до новини про міжнародні можливості">
+            <span class="art-label">МІЖНАРОДНА СПІВПРАЦЯ</span><span class="art-illustration partnership-illustration" aria-hidden="true"><i></i><i></i><i></i></span><span class="art-bottom">ERASMUS+</span>
+          </a>
+          <div class="news-body"><p class="news-meta"><time datetime="2026-11-27">27 листопада 2026</time><span>Можливості</span></p><h3><a href="https://lpnu.ua/news">Вебінар про можливості програми Erasmus+ у 2027 році</a></h3><p>Проєктний офіс університету розповість про міжнародні освітні програми.</p><a class="read-more" href="https://lpnu.ua/news">Читати далі <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="news-card">
+          <a class="news-art art-diplomacy" href="https://lpnu.ua/news" aria-label="Перейти до новини про співпрацю з МЗС">
+            <span class="art-label">ПАРТНЕРСТВО</span><span class="art-illustration diplomacy-illustration" aria-hidden="true"><i></i><i></i><i></i></span><span class="art-bottom">ДІАЛОГ І СПІВПРАЦЯ</span>
+          </a>
+          <div class="news-body"><p class="news-meta"><time datetime="2026-11-27">27 листопада 2026</time><span>Університет</span></p><h3><a href="https://lpnu.ua/news">Кафедра МІ розвиває співпрацю з Представництвом МЗС України у Львові</a></h3><p>Зустріч стала кроком до нових спільних освітніх та наукових ініціатив.</p><a class="read-more" href="https://lpnu.ua/news">Читати далі <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="news-card">
+          <a class="news-art art-research" href="https://lpnu.ua/news" aria-label="Перейти до новини про науковий практикум">
+            <span class="art-label">НАУКА</span><span class="art-illustration research-illustration" aria-hidden="true"><i></i><i></i><i></i></span><span class="art-bottom">НОВІ КОНСОРЦІУМИ</span>
+          </a>
+          <div class="news-body"><p class="news-meta"><time datetime="2026-11-27">27 листопада 2026</time><span>Дослідження</span></p><h3><a href="https://lpnu.ua/news">У Політехніці відбувся практикум із пошуку міжнародних партнерів</a></h3><p>Учасники обговорили співпрацю та формування проєктних консорціумів.</p><a class="read-more" href="https://lpnu.ua/news">Читати далі <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="news-card">
+          <a class="news-art art-language" href="https://lpnu.ua/news" aria-label="Перейти до новини про українську мову">
+            <span class="art-label">МОВА І КУЛЬТУРА</span><span class="art-illustration language-illustration" aria-hidden="true">Аа</span><span class="art-bottom">УКРАЇНСЬКА МОВА</span>
+          </a>
+          <div class="news-body"><p class="news-meta"><time datetime="2026-11-27">27 листопада 2026</time><span>Спільнота</span></p><h3><a href="https://lpnu.ua/news">Українська мова як проєкт життя: зустріч із французом Алексі Одоне</a></h3><p>Подія присвячена мові, культурному обміну та особистому досвіду.</p><a class="read-more" href="https://lpnu.ua/news">Читати далі <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="study-banner" aria-label="Освітні можливості">
+      <div><p class="section-label">Твій наступний крок</p><h2>Навчайся. Досліджуй. Створюй.</h2><p>Відкривай освітні програми, наукові можливості й студентське життя Львівської політехніки.</p></div>
+      <a class="secondary-link" href="https://lpnu.ua/">Дізнатися більше <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main"><a class="footer-brand" href="https://lpnu.ua/">Львівська політехніка</a><p>Національний університет «Львівська політехніка»</p><div class="footer-links"><a href="https://lpnu.ua/contacts">Контакти</a><a href="https://lpnu.ua/">Офіційний сайт</a></div></div><div class="footer-bottom"><span>Навчальна робота · Чонка Максим Андрійович · ІП-41</span><span>Лабораторна робота №8 · SCSS · 2026</span></div></footer>
+</body>
+</html>
